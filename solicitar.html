@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AuditUdem Solicitar</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+    /* Modify the background color */
+     
+    .navbar-custom {
+        background-color: rgb(30, 32, 30);
+    }
+    /* Modify brand and text color */
+     
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        color: rgb(255, 255, 255);
+    }
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-custom">
+        <a href="index.html"><img src="resources/logo_udemedellin2.png" width="190" height="50"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">Admin Login</a></li>
+        </ul>
+      </nav>
+
+    <h3 align="center">Registrar Solicitud</h3>
+    <br>
+    <br>
+    <form method="POST" enctype="multipart/form-data" action="conexion.php">
+    <center>
+    <img style=" padding-bottom: 5px; padding-right: 10px; width: 70px; height: 75px;" src="resources/decidir(categoria).png">
+    <label>Categoría del problema:<i><font color="#FF2626"> Obligatorio*</font></i></label>
+    <div class="input-field" style="width: 30%;">
+      <select name="categoria" required>
+        <option value="" disabled selected>Seleccione una opción</option>
+        <option>Fraude</option>
+        <option>Lavado de activos</option>
+        <option>Incumplimientos a lineamientos, procedimientos o políticas</option>
+        <option>Relaciones laborales</option>
+        <option>Conflicto de interés</option>
+        <option>Corrupción</option>
+        <option>Otro</option>
+      </select>
+    </div>
+    <br>
+    <br>
+    <img style=" padding-bottom: 5px; padding-right: 10px; width: 70px; height: 65px;" src="resources/identidad(tipousuario).png">
+    <label>Tipo de persona:<i><font color="#FF2626"> Obligatorio*</font></i></label>
+    <div class="input-field" style="width: 30%;">
+      <select name="tipo_persona" required>
+        <option value="" disabled selected hidden> Seleccione su tipo de persona</option>
+        <option>Estudiante</option>
+        <option>Profesor</option>
+        <option>Administrativo</option>
+        <option>Proveedor</option>
+        <option>Comunidad</option>
+        <option>Egresado</option>
+        <option>Asambleísta</option>
+        <option>Otro</option>
+      </select>
+    </div>
+    <br>
+    <br>
+    <img style=" padding-bottom: 10px; padding-right: 10px; width: 70px; height: 70px;" src="resources/detalle(detallecaso).png">
+    <div class="form-group" style="width:30%; width:30%; margin-left: auto; margin-right: auto;">
+      <label for="razon">Detalle del caso: <i><font color="#FF2626"> Obligatorio* (debe tener mínimo 20 caracteres)</font></i></label>
+      <div class="form-group">
+        <textarea id="razon" name="detalle_caso" rows="4" cols="55"
+                    placeholder='Describa aquí el caso, recuerde que debe ser lo más claro y detallado posible, de ser posible mencione el lugar y la fecha del caso, y las personas involucradas ' required></textarea>
+
+    </div>
+    <br>
+    <br>
+    <img style="width: 70px; height: 70px;" src="resources/adjuntar(adjuntararchivo).png">
+    <div class="form-group">    
+       <label for="evidencia">Adjuntar evidencia (no obligatorio)</label>
+       <input style="padding-left: 70px ;" type="file" name="file">
+    </div>
+    <br>
+    <br>
+    <button type="submit" class ="btn" style="background-color: #399fa7; color: aliceblue; margin:auto;display:block">Enviar solicitud</button>
+    <br>
+    <br>
+    </center>
+</form>
+  
+            
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        var sel = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(sel);
+    })
+    </script>
+</body>
+</html>

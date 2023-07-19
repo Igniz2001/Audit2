@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AuditUdem Inicio</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+    /* Modify the background color */
+     
+    .navbar-custom {
+        background-color: rgb(30, 32, 30);
+    }
+    /* Modify brand and text color */
+     
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        color: rgb(255, 255, 255);
+    }
+
+    #more {display: none;}
+</style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-custom">
+    <a href="index.html"><img src="resources/logo_udemedellin2.png" width="190" height="50"></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="sass.html">Admin Login</a></li>
+    </ul>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 style="color: rgba(255, 0, 0, 0.904);font-family: sans-serif;">Bienvenido a la linea Ética Udem</h1>
+        <div class="row center">
+          <h5 style="color: rgb(255, 255, 255);background-color: rgb(44, 44, 44);font-family: sans-serif;">Una nueva forma de hacerte escuchar</h5>
+        </div>
+        
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="resources/background1.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+  <center>
+    <div>
+        <h3 style = "color:#ffffff;background-color:  rgb(30, 32, 30);font-size: 40px;"><i class="material-icons">info</i>Nuestro propósito</h3>
+        <h3 style = " padding : 10px; font-family: sans-serif, sans-serif; color:#000000; font-size: 16px;"  >
+     Alineados con los valores institucionales<span id="dots">...</span><span id="more"> como la excelencia, la justicia y el respeto,
+     se diseñó la Línea de Transparencia (Transparencia UdeMedellin) como una herramienta que 
+     permite establecer un canal de comunicación con la Dirección de Auditoría Interna e identificar 
+     todas aquellas circunstancias o comportamientos que vayan en contravía de la conducta esperada por 
+     todos los que interactuamos en la Universidad y que a su vez, se rigen por el Código de Buen Gobierno
+     y demás lineamientos existentes en la institución. <br>
+    
+    La línea de transparencia se estructura con la intensión de que la Universidad cuente con un canal
+     eficiente para reportar denuncias por acciones irregulares que se presenten en el desarrollo de las 
+     diferentes actividades que componen la dinámica institucional, así como una herramienta de consulta 
+     para que cualquier persona pueda expresar sus inquietudes relacionadas con el desarrollo de los procesos 
+     de transparencia y conducta ética en la Institución, propiciando un escenario de confianza donde las 
+     inquietudes van a ser atendidas con la mayor objetividad e independencia. Cabe resaltar que los diferentes 
+     casos serán atendidos bajo estrictos estándares de confidencialidad y respeto, sin dar cabida a represalias.
+     <br>      
+        </span></h3>
+        <label>
+            <a href="resources/GUÍA DE AUDITORÍA INTERNA.pdf" download>
+            </a>
+                <button type="submit" style = "color:#ffffff;background-color: #26a69a;" class ="btn" onclick="window.open('resources/GUÍA DE AUDITORÍA INTERNA.pdf')" download><i class="material-icons">insert_drive_file</i> Guía sobre la auditoría interna</button>     
+               <!-- <a onclick="window.open('/static/TEST.pdf')" download>Guía completa sobre la auditoría interna</a>-->       
+        </label>
+    </div>
+    <br>
+    <button onclick="myFunction()" id="myBtn">Leer más</button>
+    </center>
+  <center>
+    <h3 style="background-color: rgba(211, 35, 35, 0.89);color: #ffffff;font-size: 40px;"><i class="material-icons">edit</i>Iniciemos</h3>
+  </center>
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+
+        <div class="col s12 m4" style="float: left;padding-top: 25px;padding-left: 100px;">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">comment</i></h2>
+            <h5 class="center">Exponer tu caso</h5>
+
+            <div class="row center">
+              <a href="solicitar.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Clíck Aquí</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="col s12 m4" style="float: right;padding-right: 100px;padding-top: 3px;">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">find_in_page</i></h2>
+            <h5 class="center">Consultar petición</h5>
+            <div class="row center">
+              <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Clíck Aquí</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Leer más"; 
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Ocultar"; 
+        moreText.style.display = "inline";
+      }
+    }
+    </script>
+  </body>
+</html>
