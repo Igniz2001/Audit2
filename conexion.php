@@ -38,7 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "INSERT INTO solicitudes (categoria, tipo_persona, detalle_caso, archivo_adjunto, numero_solicitud) VALUES ('$categoria', '$tipo_persona', '$detalle_caso', '$file_path', '$numero_solicitud')";
 
             if ($conn->query($sql) === TRUE) {
-                echo "Solicitud guardada correctamente";
+                // Redireccionar al usuario a la página de mostrar_solicitud.php con el número de solicitud como parámetro
+                header("Location: mostrar_solicitud.php?numero_solicitud=" . $numero_solicitud);
+                exit; // Finalizar el script para evitar que se siga ejecutando el resto del código
             } else {
                 echo "Error al guardar la solicitud: " . $conn->error;
             }
@@ -50,7 +52,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO solicitudes (categoria, tipo_persona, detalle_caso, numero_solicitud) VALUES ('$categoria', '$tipo_persona', '$detalle_caso', '$numero_solicitud')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Solicitud guardada correctamente";
+            // Redireccionar al usuario a la página de mostrar_solicitud.php con el número de solicitud como parámetro
+            header("Location: mostrar_solicitud.php?numero_solicitud=" . $numero_solicitud);
+            exit; // Finalizar el script para evitar que se siga ejecutando el resto del código
         } else {
             echo "Error al guardar la solicitud: " . $conn->error;
         }
