@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AuditUdem Consultar</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+    /* Modify the background color */
+     
+    .navbar-custom {
+        background-color: rgb(30, 32, 30);
+    }
+    /* Modify brand and text color */
+     
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        color: rgb(255, 255, 255);
+    }
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-custom">
+        <a href="index.html"><img src="resources/logo_udemedellin2.png" width="190" height="50"></a>
+      </nav>
+    
+    <br/>
+    <center>
+    <h3>Consultar petición</h3>
+
+
+    <div class="form-group" style="margin:20px; width: 30%;">
+        <label for="radicado">Código de Radicado</label>
+        <input
+          type="text"
+          class="form-control"
+          id="radicado"
+          name="radicado"
+          placeholder="Escriba el número de radicado"
+        />
+      </div>
+
+      <button type="button" class="btn" style="background-color: #3A66AA; color: aliceblue; margin-left: 20px" onclick="consultarSolicitud()">Consultar</button>
+      <div id="resultadoConsulta"></div>
+
+    </center>
+
+    <script>
+      function consultarSolicitud() {
+        var radicado = document.getElementById("radicado").value;
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("resultadoConsulta").innerHTML = this.responseText;
+          }
+        };
+
+        xhttp.open("POST", "consultar.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("radicado=" + radicado);
+      }
+    </script>
+
+</body>
+</html>
