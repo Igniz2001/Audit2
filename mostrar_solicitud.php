@@ -35,7 +35,7 @@
   $numero_solicitud = $_GET["numero_solicitud"];
 
   // Mostrar el número de solicitud al usuario
-  echo '<p>Su número de solicitud es: ' . $numero_solicitud . '</p>';
+  echo '<h2>Su número de radicado es: ' . $numero_solicitud . '</h2>';
   ?>
 
   <!-- Botón para continuar al menú principal (index.html) -->
